@@ -91,3 +91,5 @@ sudo -u postgres psql
 journalctl -u postgresql.service
 ```
 
+## PG Admin 4
+Source: https://www.pgadmin.org/download/pgadmin-4-apt/
