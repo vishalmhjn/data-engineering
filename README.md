@@ -1,7 +1,7 @@
 # data-engineering
 
 ## Installation
-Updated installation instructions for Chapter 1 of [Data Engineering with Python By Paul Crickard](https://www.packtpub.com/product/data-engineering-with-python/9781839214189)
+Updated installation instructions for Chapter 2 of [Data Engineering with Python By Paul Crickard](https://www.packtpub.com/product/data-engineering-with-python/9781839214189)
 
 OS: __Ubuntu 18__ (hopefully should work on __Mac__ too using brew)
 
