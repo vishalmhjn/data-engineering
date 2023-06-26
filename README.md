@@ -1,9 +1,11 @@
 # data-engineering
-Updated installation instructions for Data Engineering
 
-OS: __Ubuntu 18__
+## Installation
+Updated installation instructions for Chapter 1 of [Data Engineering with Python By Paul Crickard](https://www.packtpub.com/product/data-engineering-with-python/9781839214189)
 
-## Nifi
+OS: __Ubuntu 18__ (hopefully should work on __Mac__ too using brew)
+
+## 1. Nifi
 Set HTTPS Port in "conf/nifi.properties" e.g., 8090
 ```sh
 cd nifi-1.22.0/
@@ -32,7 +34,7 @@ Generated Username []
 Generated Password []
 ```
 
-## Apache Airflow
+## 2. Apache Airflow
 ```sh
 python3.8 -m venv airflow
 source ~/airflow/bin/activate
@@ -46,7 +48,7 @@ airflow webserver
 airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
 ```
 
-## Elastic Search
+## 3. Elastic Search
 _This was most annoying part and only the installation via Debian seems to work._
 
 Source: https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
@@ -66,7 +68,7 @@ sudo /bin/systemctl enable elasticsearch.service
 journalctl -u elasticsearch.service
 ```
 
-## Kibana
+## 4. Kibana
 Source: https://www.elastic.co/guide/en/kibana/current/deb.html
 ```sh
 wget https://artifacts.elastic.co/downloads/kibana/kibana-8.8.1-amd64.deb
@@ -78,7 +80,7 @@ sudo systemctl start kibana.service
 journalctl -u kibana.service
 ```
 
-## PostgreSQL
+## 5. PostgreSQL
 Source: https://www.postgresql.org/download/linux/debian/
 ```sh
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -91,5 +93,5 @@ sudo -u postgres psql
 journalctl -u postgresql.service
 ```
 
-## PG Admin 4
+## 6. PG Admin 4
 Source: https://www.pgadmin.org/download/pgadmin-4-apt/
