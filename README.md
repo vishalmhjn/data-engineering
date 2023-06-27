@@ -70,6 +70,8 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
 
 sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable elasticsearch.service
+
+sudo /bin/systemctl start elasticsearch.service
 journalctl -u elasticsearch.service
 ```
 
