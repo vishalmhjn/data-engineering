@@ -11,7 +11,6 @@ Set HTTPS Port in "conf/nifi.properties" e.g., 8090
 cd nifi-1.22.0/
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ./bin/nifi.sh start
-nifi start
 ```
 https://127.0.0.1:8090/nifi/login
 
@@ -27,6 +26,12 @@ Change above to below:
     <property name="Username"></property>
     <property name="Password"></property>
 ```
+Retart nifi
+```sh
+./bin/nifi.sh stop
+./bin/nifi.sh start
+```
+
 Check the password in "conf/nifi-app.log" for
 
 ```
@@ -48,7 +53,7 @@ airflow webserver
 airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
 ```
 
-## 3. Elastic Search
+## 3. Elastic Search 🚫
 _This was most annoying part and only the installation via Debian seems to work._
 
 Source: https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
